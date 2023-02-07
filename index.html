@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 </head>
 <body>
-    <div class="container">
+    <div class="container disable">
         <h2>Editor de Imagens</h2>
         <div class="wrapper">
             <div class="editor-panel">
                 <div class="filter">
                     <label class="title">Filtros</label>
                     <div class="options">
-                        <button class="active">Brilho</button>
-                        <button>Saturação</button>
-                        <button>Inversão</button>
-                        <button>Escala de Cinza</button>
+                        <button id="brightness" class="active">Brilho</button>
+                        <button id="saturation">Saturação</button>
+                        <button id="inversion">Inversão</button>
+                        <button id="grayscale">Escala de Cinza</button>
                     </div>
                     <div class="slider">
                         <div class="filter-info">
@@ -47,10 +47,13 @@
         <div class="controls">
             <button class="reset-filter">Restaurar Filtro</button>
             <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
                 <button class="choose-img">Escolher Imagem</button>
                 <button class="save-img">Salvar Imagem</button>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
